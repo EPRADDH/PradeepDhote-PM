@@ -1,0 +1,429 @@
+/* ==========================================================================
+   PRADEEP DHOTE - EXECUTIVE PORTFOLIO
+   Responsive Styles & Media Queries
+   ========================================================================== */
+
+/* Large Desktop screens (1200px and below) */
+@media (max-width: 1200px) {
+  .hero-headline {
+    font-size: 2.75rem;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+  
+  .footer-grid > :nth-child(4) {
+    grid-column: span 3;
+    margin-top: 1rem;
+  }
+}
+
+/* Tablets (992px and below) */
+@media (max-width: 992px) {
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-headline {
+    font-size: 2.4rem;
+  }
+
+  .hero-tagline {
+    max-width: 100%;
+  }
+
+  .hero-portrait-frame {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .hero-experience-badge {
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metric-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .metric-card:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline responsive stacking */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot {
+    left: 10px;
+  }
+
+  /* Navigation drawer on mobile */
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--bg-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.75rem;
+    gap: 1.25rem;
+    border-top: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    padding: 0.5rem 0 0.5rem 1rem;
+    min-width: 100%;
+    background: transparent;
+  }
+
+  .nav-link {
+    font-size: 1.15rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .resume-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .footer-newsletter {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Devices (640px and below) */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .hero {
+    padding-top: 8rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-headline {
+    font-size: 1.95rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .metric-value {
+    font-size: 2.5rem;
+  }
+
+  .footer-newsletter {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .footer-newsletter-input-group {
+    flex-direction: column;
+  }
+
+  .footer-newsletter-btn {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid > :nth-child(4) {
+    grid-column: span 1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .resume-preview-box {
+    padding: 1.5rem;
+  }
+
+  .studio-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .studio-actions {
+    width: 100%;
+  }
+
+  .studio-actions .studio-btn {
+    flex: 1 1 auto;
+  }
+}
+
+/* Mobile/Tablet media queries for Astra layout */
+@media (max-width: 992px) {
+  .astra-about-grid,
+  .astra-skills-exp-grid,
+  .astra-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .astra-services-grid,
+  .astra-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .astra-about-heading {
+    font-size: 2.1rem;
+  }
+
+  .astra-serif-title {
+    font-size: 2.5rem;
+  }
+
+  .astra-get-in-touch-heading {
+    font-size: 3rem;
+  }
+
+  .hero-circle-frame {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* Responsive rules for About Executive Summary, Profile Card & Expertise Grid */
+@media (max-width: 1120px) {
+  .about-profile-card {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .about-details-panel {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 1.5rem;
+  }
+
+  .about-expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .about-kpi-bar {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.25rem;
+  }
+
+  .about-kpi-item:nth-child(2n) {
+    border-right: none;
+  }
+
+  .about-kpi-item:nth-child(-n+2) {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+  }
+
+  .about-kpi-item:nth-child(n+3) {
+    padding-top: 0.75rem;
+  }
+
+  .about-profile-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .about-portrait-box {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .about-details-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .about-expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .about-exec-intro {
+    padding-top: 6.25rem;
+    padding-bottom: 3rem;
+  }
+
+  .about-kpi-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .about-kpi-item:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.9rem;
+  }
+
+  .about-kpi-item {
+    padding-top: 0.35rem;
+  }
+
+  .about-expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive rules for Home Executive Dark Navy Hero */
+@media (max-width: 992px) {
+  .hero.hero--dark-exec {
+    padding: 7.25rem 0 0 0;
+    min-height: auto;
+  }
+
+  .hero--dark-exec .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .hero--dark-exec .hero-content {
+    align-items: center;
+    padding: 1rem 0 1.25rem 0;
+  }
+
+  .hero-exec-bio {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-exec-actions {
+    justify-content: center;
+  }
+
+  .hero-exec-visual {
+    justify-content: center;
+  }
+
+  .hero-exec-portrait-stage {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  .hero--dark-exec .hero-radial-rings {
+    right: 50%;
+    top: 66%;
+    transform: translate(50%, -45%);
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero.hero--dark-exec {
+    padding: 6.5rem 0 0 0;
+  }
+
+  .hero-exec-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-outline {
+    width: 100%;
+  }
+}
+
